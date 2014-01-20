@@ -1,0 +1,18 @@
+{
+  "db": {
+      "collection": "users",
+      "version": "1.20",
+      "package": {"version":["1.x"]},
+      "conf":{"dir": "/opt/mongodb/conf"}
+  },
+
+  "web": {
+     "dir": "/opt/tomcat/webapps/web",
+     "cname": "www.wldandan.test.com"
+  },
+
+  "run_list": [
+    "recipe[dbserver]",
+    "recipe[webserver]"
+  ]
+}
